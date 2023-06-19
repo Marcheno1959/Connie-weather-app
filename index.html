@@ -20,6 +20,9 @@
       integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/style.css" />
     <!--Place this here to override Bootstrap styling-->
     <title>Weather App</title>
@@ -30,18 +33,15 @@
         <div class="weather-app">
           <div class="weather-snapshot">
             <!--aka "overview"-->
-            <h1>
+            <h1 id="city">
               <!--Note: h1 is a block element-->
-              Barcelona
             </h1>
             <ul>
               <!--ul/li's have inherent spaces which css can remove-->
               <li>
                 Wednesday 19:40
               </li>
-              <li>
-                Mostly sunny
-              </li>
+              <li id="description"></li>
             </ul>
           </div>
           <!--end of div class="weather-snapshot"-->
@@ -54,7 +54,7 @@
                   alt="mostly-sunny"
                   id="icon"
                 />
-                <strong id="temperature">26</strong>
+                <strong id="temperature"></strong>
                 <span class="units">
                   °C |
                   <a href="#">°F</a>

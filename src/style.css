@@ -12,6 +12,7 @@ h1 {
 }
 
 ul {
+  /* ul/li's have inherent spacing */
   margin: 0;
   padding: 0;
 }
@@ -50,6 +51,7 @@ li {
 }
 
 .weather-snapshot {
+  /* overview */
   margin-bottom: 20px;
 }
 
@@ -71,7 +73,7 @@ li {
 .weather-temperature units {
   color: #202124;
   display: inline;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   height: auto;
   line-height: 24px;
@@ -79,5 +81,6 @@ li {
 }
 
 a {
+  /* link for °F */
   text-decoration: none;
 }
