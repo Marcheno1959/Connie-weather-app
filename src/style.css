@@ -27,6 +27,10 @@ li {
   line-height: 19px;
 }
 
+a {
+  /* link for °F */
+  text-decoration: none;
+}
 /* Class selectors at the bottom and the generic element selectors at the top */
 
 .weather-app-wrapper {
@@ -80,7 +84,6 @@ li {
   width: auto;
 }
 
-a {
-  /* link for °F */
-  text-decoration: none;
+.description {
+  text-transform: capitalize; /* transform the first letter of descriptionElement to capitalize (see steps 16 & 17 app.js */
 }
