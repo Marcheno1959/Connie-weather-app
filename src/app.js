@@ -23,7 +23,6 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
   /* step 7 - define the function displayTemperature that Axios will call which the API sends a response back to the call */
   /* step 8 -  console.log(response.data.temperature.current); */
   let temperatureElement =
