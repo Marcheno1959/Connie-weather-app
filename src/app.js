@@ -19,7 +19,7 @@ function formatDate(timestamp) {
     "Saturday",
   ]; /* step 29 - defining the days of the week */
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`; /* step 29 - using template literals, this should display the format of the day and time in the dateElement which are called by the formatDate function */
+  return `${day} ${hours}:${minutes}`; /* step 30 - using template literals, this should display the format of the day and time in the dateElement which are called by the formatDate function */
 }
 
 function displayTemperature(response) {
@@ -58,6 +58,11 @@ function displayTemperature(response) {
       "#date"
     ); /* step 24 - select the element with id="date" */
 
+  let iconElement =
+    document.querySelector(
+      "#icon"
+    ); /* step 31 - select the element with id="icon" */
+
   temperatureElement.innerHTML = Math.round(
     response.data.temperature.current
   ); /* step 13 - temperatureElement with id="temperature" displays rounded current temperature */
@@ -75,17 +80,24 @@ function displayTemperature(response) {
   dateElement.innerHTML = formatDate(
     response.data.time * 1000
   ); /* step 25 - dateElement with id="date" displays current date and time * 1000 to convert time to milliseconds from date and time since 1970 */
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  ); /* step 32 - setAttribute for the src link of the icon for the city variable and with template literals string `${}` replacing hard-coded icon code to insert the right icon */
+  iconElement.setAttribute(
+    "alt",
+    response.data.condition.description
+  ); /* step 33 - setAttribute for the "alt" text for weather icon */
 }
 /* step 9 - to display the real temperature in the 'weather temperature' element, remove the hard-coded value in HTML and add an id="temperature" */
 /* step 10 - to display the real city in the 'h1' element, remove the hard-coded city in HTML and add an id="city" */
 /* step 11 - to display the real weather condition in the 'li' element, remove the hard-coded description in HTML and add an id="description" */
-let city = "Cancun";
 
 let apiKey =
   "94f405d2060ftof44a10fbe606f73f39"; /* step 3 - store API key in a variable for authentication*/
-
+let city = "Barcelona"; /* added this variable to test the API */
 let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`; /* step 4 - get documentation for current weather URL endpoint & paste here */
 /* step 5 - console.log(apiUrl); */
 console.log(apiUrl);
 axios.get(apiUrl).then(displayTemperature);
-/* step 6 - use Axios to make the API call to fetch the results of the API to display temperatue */
+/* step 6 - use Axios to make the API call to fetch the results of the API to display temperature */
