@@ -78,12 +78,12 @@ a {
   width: auto;
 }
 
-.weather-temperature units {
+.weather-temperature .units {
   color: #202124;
-  display: inline;
   font-size: 14px;
   font-weight: 400;
   height: auto;
   line-height: 22px;
   width: auto;
+  margin-top: 5px;
 }
