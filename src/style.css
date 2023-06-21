@@ -78,6 +78,7 @@ a {
   width: auto;
 }
 
+/* added '.' before units which made margin-top work */
 .weather-temperature .units {
   color: #202124;
   font-size: 14px;
