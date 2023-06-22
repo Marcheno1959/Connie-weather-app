@@ -17,7 +17,7 @@ function formatDate(timestamp) {
     "Thursday",
     "Friday",
     "Saturday",
-  ]; /* step 29 - defining the days of the week */
+  ]; /* step 29 - defining the days of the week and creating a variable below to fetch the actual day of the week */
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`; /* step 30 - using template literals, this should display the format of the day and time in the dateElement which are called by the formatDate function */
 }
