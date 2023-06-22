@@ -31,14 +31,34 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <form id="search-form">
-            <!--added search form for search engine-->
-            <input
-              type="search"
-              placeholder="Enter city"
-              class="form-control"
-            />
-            <!--form control is a Bootstrap class name to style form elements like input fields, dropdowns, and textareas-->
+          <form id="search-form" class="mb-3">
+            <!--step 36 - added class="mb-3" for margin bottom to add space between city element and input form-->
+            <!--step 34 - added search form for search engine-->
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Enter city"
+                  class="form-control"
+                  id="city-input"
+                />
+                <!--form control is a Bootstrap class name to style form elements like input fields, dropdowns, and textareas-->
+                <!--step 40 - added id="city-input" to input element for targeting in JS-->
+              </div>
+              <!--end of div class"col-9"-->
+
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                />
+                <!--step 35 - added an input search button -->
+                <!--added class="btn btn-primary w-100" where 'w-100' gives the button 100px rather than styling it in CSS to make it wider-->
+              </div>
+              <!--end of div class"col-3"-->
+            </div>
+            <!--end of div class="row"-->
           </form>
           <div class="weather-snapshot">
             <!--aka "overview"-->
