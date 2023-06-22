@@ -124,7 +124,8 @@ function handleSubmit(event) {
 
 function displayFahrenheitValue(event) {
   event.preventDefault();
-  alert("Great");
+  let fahrenheitTemperature = (33 * 9) / 5 + 32;
+  alert(fahrenheitTemperature);
 }
 
 let form =
