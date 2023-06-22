@@ -122,6 +122,11 @@ function handleSubmit(event) {
 
 /* step 46 - to test if the function search is working: 'search("Paris");' on reload should display weather for Paris */
 
+function displayFahrenheitValue(event) {
+  event.preventDefault();
+  alert("Great");
+}
+
 let form =
   document.querySelector(
     "#search-form"
@@ -130,3 +135,6 @@ form.addEventListener(
   "submit",
   handleSubmit
 ); /* step 38 - added an eventListener to the form so whenever a user submits an input, it will execute a search */
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitValue);
