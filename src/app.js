@@ -116,7 +116,7 @@ function handleSubmit(event) {
     ); /* step 41 - target the element with id="city-input" */
   /* step 42 -console.log(cityInputElement.value); to ensure city-input is working properly */
   search(
-    enterCityElement.value
+    cityInputElement.value
   ); /* step 47 - to execute the API call to fetch the data of the city submitted in the form */
 }
 
