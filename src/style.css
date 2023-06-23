@@ -87,3 +87,7 @@ a {
   color: #202124;
   cursor: default;
 }
+
+.weather-forecast {
+  margin-top: 20px;
+}
