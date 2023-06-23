@@ -31,10 +31,6 @@ li::first-letter {
   text-transform: capitalize;
 }
 
-a {
-  /* link for °F */
-  text-decoration: none;
-}
 /* Class selectors at the bottom and the generic element selectors at the top */
 
 .weather-app-wrapper {
@@ -89,6 +85,6 @@ a {
   margin-top: 5px;
 }
 
-#fahrenheit-link:hover {
+.weather-temperature .units a:hover {
   text-decoration: underline;
 }

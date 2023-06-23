@@ -24,7 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <link rel="stylesheet" href="src/style.css" />
-    <!--Place this here to override Bootstrap styling-->
+
     <title>Weather App</title>
   </head>
   <body>
@@ -32,8 +32,6 @@
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <form id="search-form" class="mb-3">
-            <!--step 36 - added class="mb-3" for margin bottom to add space between city element and input form-->
-            <!--step 34 - added search form for search engine-->
             <div class="row">
               <div class="col-9">
                 <input
@@ -42,8 +40,6 @@
                   class="form-control"
                   id="city-input"
                 />
-                <!--form control is a Bootstrap class name to style form elements like input fields, dropdowns, and textareas-->
-                <!--step 40 - added id="city-input" to input element for targeting in JS-->
               </div>
               <!--end of div class"col-9"-->
 
@@ -53,8 +49,6 @@
                   value="Search"
                   class="btn btn-primary w-100"
                 />
-                <!--step 35 - added an input search button -->
-                <!--added class="btn btn-primary w-100" where 'w-100' gives the button 100px rather than styling it in CSS to make it wider-->
               </div>
               <!--end of div class"col-3"-->
             </div>
@@ -62,11 +56,8 @@
           </form>
           <div class="weather-snapshot">
             <!--aka "overview"-->
-            <h1 id="city">
-              <!--Note: h1 is a block element-->
-            </h1>
+            <h1 id="city"></h1>
             <ul>
-              <!--ul/li's have inherent spaces which css can remove-->
               <li id="date"><span id="day"></span> <span id="" time></span></li>
               <li class="description" id="description"></li>
             </ul>
@@ -75,15 +66,13 @@
           <div class="row">
             <div class="col-6">
               <div class="d-flex weather-temperature">
-                <!--Created 'd.flex .weather-temperature img' class to target in CSS instead of clearfix float-left-->
                 <img src="" alt="" id="icon" />
+
                 <strong id="temperature"></strong>
                 <span class="units">
                   <a href="#" id="celsius-link">°C</a>
-                  <!--added id="celsius-link" to target in JS-->
                   |
                   <a href="#" id="fahrenheit-link">°F</a>
-                  <!--added id="fahrenheit-link" to target in JS-->
                 </span>
               </div>
               <!--end of div class="d-flex weather-temperature"-->
