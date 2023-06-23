@@ -18,7 +18,23 @@ function formatDate(timestamp) {
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  forecastElement.innerHTML = "";
+  forecastElement.innerHTML = `
+  <div class="row">
+              <div class="col-2">
+                <div class="day-weather-forecast">Fri</div>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt="Partly cloudy"
+                  width="30"
+                />
+                <div class="day-temperature-forecast">
+                  <span class="day-temperature-forecast-max">28°</span>
+                  <span class="day-temperature-forecast-min">16°</span>
+                </div>
+              </div>
+            </div>
+            
+  `;
 }
 
 function displayTemperature(response) {
