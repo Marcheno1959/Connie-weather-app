@@ -12,7 +12,6 @@ h1 {
 }
 
 ul {
-  /* ul/li's have inherent spacing and margin and padding 0 remove them */
   margin: 0;
   padding: 0;
 }
@@ -31,7 +30,9 @@ li::first-letter {
   text-transform: capitalize;
 }
 
-/* Class selectors at the bottom and the generic element selectors at the top */
+a {
+  text-decoration: none;
+}
 
 .weather-app-wrapper {
   max-width: 600px;
@@ -55,12 +56,10 @@ li::first-letter {
 }
 
 .weather-snapshot {
-  /* overview */
   margin-bottom: 20px;
 }
 
 .weather-temperature img {
-  /* targetting the weather image */
   margin-right: 10px;
   height: 64px;
   vertical-align: top;
@@ -74,7 +73,6 @@ li::first-letter {
   width: auto;
 }
 
-/* added '.' before units which made margin-top work */
 .weather-temperature .units {
   color: #202124;
   font-size: 14px;
@@ -85,6 +83,7 @@ li::first-letter {
   margin-top: 5px;
 }
 
-.weather-temperature .units a:hover {
-  text-decoration: underline;
+.weather-temperature .active {
+  color: #202124;
+  cursor: default;
 }
