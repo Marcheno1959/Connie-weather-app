@@ -16,7 +16,7 @@ function formatDate(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log(response.data);
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -42,7 +42,6 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(response.data.daily);
   let apiKey = "94f405d2060ftof44a10fbe606f73f39";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
   console.log(apiUrl);
