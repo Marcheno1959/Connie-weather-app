@@ -22,12 +22,16 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
+
+  forecast.pop();
+
   let days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu"];
+
   forecast.forEach(function (forecastDay, index) {
     let day = days[index];
     let weatherIcon = forecastDay.condition.icon;
-    let maxTemperture = forecastDay.temperature.maximum;
-    let minTemperature = forecastDay.temperature.minimum;
+    let maxTemperture = Math.round(forecastDay.temperature.maximum);
+    let minTemperature = Math.round(forecastDay.temperature.minimum);
     forecastHTML += `
   <div class="col-2">
   <div class="day-weather-forecast">${day}</div>
