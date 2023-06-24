@@ -22,7 +22,7 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu"];
   forecast.forEach(function (forecastDay, index) {
     let day = days[index];
     let weatherIcon = forecastDay.condition.icon;
