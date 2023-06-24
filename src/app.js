@@ -45,6 +45,7 @@ function getForecast(coordinates) {
   let apiKey = "94f405d2060ftof44a10fbe606f73f39";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${coordinates}&lat=${coordinates}&key=${apiKey}&units=metric`;
   console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayTemperature(response) {
@@ -122,4 +123,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusValue);
 
 search("Paris");
-displayForecast();
