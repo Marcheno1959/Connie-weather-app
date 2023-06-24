@@ -23,18 +23,22 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
   let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
-  days.forEach(function (forecastDay) {
+  forecast.forEach(function (forecastDay, index) {
+    let day = days[index];
+    let weatherIcon = forecastDay[index].icon;
+    let maxTemperture = forecastDay[index].temperature.maximum;
+    let minTemperature = forecast[index].temperature.minimum;
     forecastHTML += `
   <div class="col-2">
-  <div class="day-weather-forecast">${forecastDay.temperature}</div>
+  <div class="day-weather-forecast">${day}</div>
   <img
-  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.weather[0].condition.icon}.png"
+  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${weatherIcon}.png"
   alt="Clear skies"
   width="30"
   />
   <div class="day-temperature-forecast">
-  <span class="day-temperature-forecast-max"> ${forecastDay.temperature.maximum}° </span>
-  <span class="day-temperature-forecast-min"> ${forecastDay.temperature.minimum}° </span>
+  <span class="day-temperature-forecast-max"> ${maxTemperture}°</span>
+  <span class="day-temperature-forecast-min"> ${minTemperature}°</span>
   </div>
   </div>
   `;
