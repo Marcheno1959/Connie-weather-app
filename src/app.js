@@ -25,13 +25,21 @@ function displayForecast(response) {
 
   forecast.pop();
 
-  let days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu"];
+  let currentDate = new Date();
+  let currentDayIndex = currentDate.getDay();
+
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  let adjustedDays = days
+    .slice(currentDayIndex)
+    .concat(days.slice(0, currentDayIndex));
 
   forecast.forEach(function (forecastDay, index) {
-    let day = days[index];
     let weatherIcon = forecastDay.condition.icon;
     let maxTemperture = Math.round(forecastDay.temperature.maximum);
     let minTemperature = Math.round(forecastDay.temperature.minimum);
+    let day = adjustedDays[index];
+
     forecastHTML += `
   <div class="col-2">
   <div class="day-weather-forecast">${day}</div>
