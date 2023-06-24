@@ -25,7 +25,7 @@ function displayForecast(response) {
   days.forEach(function (forecastDay) {
     forecastHTML += `
   <div class="col-2">
-  <div class="day-weather-forecast">${forecastDay.temperature.day}</div>
+  <div class="day-weather-forecast">${forecastDay.temperature}</div>
   <img
   src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.weather[0].condition.icon}.png"
   alt="Clear skies"
