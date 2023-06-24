@@ -26,8 +26,8 @@ function displayForecast(response) {
   <div class="col-2">
   <div class="day-weather-forecast">${day}</div>
   <img
-  src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png"
-  alt="Partly cloudy"
+  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+  alt="Clear skies"
   width="30"
   />
   <div class="day-temperature-forecast">
