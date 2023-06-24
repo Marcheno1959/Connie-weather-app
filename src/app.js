@@ -27,7 +27,7 @@ function displayForecast(response) {
     let day = days[index];
     let weatherIcon = forecastDay.condition.icon;
     let maxTemperture = forecastDay.temperature.maximum;
-    let minTemperature = forecast.temperature.minimum;
+    let minTemperature = forecastDay.temperature.minimum;
     forecastHTML += `
   <div class="col-2">
   <div class="day-weather-forecast">${day}</div>
