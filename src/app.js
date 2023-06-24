@@ -32,8 +32,8 @@ function displayForecast(response) {
   width="30"
   />
   <div class="day-temperature-forecast">
-  <span class="day-temperature-forecast-max"> ${forecastDay.temperature.maximum}°</span>
-  <span class="day-temperature-forecast-min"> ${forecastDay.temperature.minimum}°</span>
+  <span class="day-temperature-forecast-max"> ${forecastDay.temperature.maximum}° </span>
+  <span class="day-temperature-forecast-min"> ${forecastDay.temperature.minimum}° </span>
   </div>
   </div>
   `;
